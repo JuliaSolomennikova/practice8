@@ -71,7 +71,6 @@ function sklon(number) {
 
     return 'напитков'
 }
-
 function generateTableRows() {
     let elem = document.querySelector('.modal').querySelector('table').querySelector('tbody').querySelectorAll('tr');
     for (let tr of elem) {
@@ -81,6 +80,7 @@ function generateTableRows() {
     for (const drink of drinks) {
         let drinkName = drink.querySelectorAll('option:checked')[0].text;
         let milkName = drink.querySelector('.milk > input:checked').value;
+        //здесь нужно реализовать словарь для удобства 
         if (milkName === 'usual') {
             milkName = 'обычное';
         } else if (milkName === 'no-fat') {
